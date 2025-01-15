@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<title>Fluxo de Caixa - Planilhas Store</title>
+	<meta content="summary_large_image" name="twitter:card" />
+	<meta content="website" property="og:type" />
+	<meta content="Fluxo de caixa automatizado com o NuBank feito no Google Sheets" property="og:description" />
+	<meta content="https://0g4o6qzbjk.preview-beefreedesign.com/SnaV" property="og:url" />
+	<meta content="https://pro-bee-beepro-thumbnail.getbee.io/messages/1328625/1314944/2328346/12201526_large.jpg" property="og:image" />
+	<meta content="Fluxo de Caixa - Planilhas Store" property="og:title" />
+	<meta content="Fluxo de caixa automatizado com o NuBank feito no Google Sheets" name="description" />
+	<meta charset="utf-8" />
+	<meta content="width=device-width" name="viewport" />
+	<link href="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/ows/09n/ikl/favicon-1064e6-16-icon.png" rel="icon" sizes="16x16" />
+	<link href="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/2jj/m0l/n75/favicon-1064e6-32-icon.png" rel="icon" sizes="32x32" />
+	<link href="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/2ao/0i2/obs/favicon-1064e6-apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+	<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-button .content {
+			text-align: center
+		}
+
+		.bee-row-24,
+		.bee-row-24 .bee-row-content {
+			background-color: #ffffff;
+			background-repeat: no-repeat
+		}
+
+		body {
+			background-color: #fff9e5;
+			color: #000000;
+			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif
+		}
+
+		a {
+			color: #0068A5
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		h2,
+		h3,
+		p {
+			margin: 0
+		}
+
+		.bee-row-content {
+			max-width: 1320px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content.reverse,
+		.bee-row-content.reverse .bee-col {
+			-moz-transform: scale(1, -1);
+			-webkit-transform: scale(1, -1);
+			-o-transform: scale(1, -1);
+			-ms-transform: scale(1, -1);
+			transform: scale(1, -1)
+		}
+
+		.bee-row-content .bee-col-w3 {
+			flex-basis: 25%
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33.3333333333%
+		}
+
+		.bee-row-content .bee-col-w5 {
+			flex-basis: 41.6666666667%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w7 {
+			flex-basis: 58.3333333333%
+		}
+
+		.bee-row-content .bee-col-w8 {
+			flex-basis: 66.6666666667%
+		}
+
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-button a,
+		.bee-icon .bee-icon-label-right a,
+		.bee-menu ul li a {
+			text-decoration: none
+		}
+
+		.bee-divider,
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-1 .bee-block-1,
+		.bee-row-22 .bee-col-2 .bee-block-1,
+		.bee-row-4 .bee-col-2 .bee-block-1 {
+			width: 100%
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-paragraph {
+			overflow-wrap: anywhere
+		}
+
+		.bee-row-1,
+		.bee-row-10,
+		.bee-row-11,
+		.bee-row-12,
+		.bee-row-13,
+		.bee-row-14,
+		.bee-row-15,
+		.bee-row-16,
+		.bee-row-17,
+		.bee-row-18,
+		.bee-row-19,
+		.bee-row-2,
+		.bee-row-20,
+		.bee-row-21,
+		.bee-row-22,
+		.bee-row-23,
+		.bee-row-3,
+		.bee-row-4,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-7,
+		.bee-row-8,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-10 .bee-row-content,
+		.bee-row-11 .bee-row-content,
+		.bee-row-15 .bee-row-content,
+		.bee-row-16 .bee-row-content,
+		.bee-row-17 .bee-row-content,
+		.bee-row-2 .bee-row-content,
+		.bee-row-21 .bee-row-content,
+		.bee-row-22 .bee-row-content,
+		.bee-row-23 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000000
+		}
+
+		.bee-row-2 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-left: 25px;
+			padding-right: 25px
+		}
+
+		.bee-row-2 .bee-col-2,
+		.bee-row-24 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-4 .bee-row-content {
+			background-position: center top;
+			background-repeat: no-repeat;
+			color: #000000
+		}
+
+		.bee-row-4 .bee-col-1 {
+			padding: 40px 25px 25px
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 {
+			padding-top: 30px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2,
+		.bee-row-4 .bee-col-1 .bee-block-2 {
+			padding-top: 35px
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-3,
+		.bee-row-4 .bee-col-1 .bee-block-3 {
+			padding-top: 45px;
+			text-align: left
+		}
+
+		.bee-row-4 .bee-col-2 {
+			padding: 15px 25px 5px
+		}
+
+		.bee-row-12 .bee-row-content,
+		.bee-row-18 .bee-row-content,
+		.bee-row-6 .bee-row-content {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/top__1_.png');
+			background-position: center top;
+			background-repeat: no-repeat;
+			color: #000000
+		}
+
+		.bee-row-13 .bee-row-content,
+		.bee-row-19 .bee-row-content,
+		.bee-row-7 .bee-row-content {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/middle_1.png');
+			background-position: center top;
+			background-repeat: repeat;
+			color: #000000
+		}
+
+		.bee-row-13 .bee-col-1,
+		.bee-row-13 .bee-col-2,
+		.bee-row-19 .bee-col-1,
+		.bee-row-7 .bee-col-1,
+		.bee-row-7 .bee-col-2,
+		.bee-row-7 .bee-col-3 {
+			padding: 10px 25px
+		}
+
+		.bee-row-7 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-2 .bee-block-1,
+		.bee-row-7 .bee-col-3 .bee-block-1 {
+			color: #000000;
+			font-family: inherit;
+			font-size: 14px;
+			text-align: center
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-2,
+		.bee-row-7 .bee-col-2 .bee-block-2,
+		.bee-row-7 .bee-col-3 .bee-block-2 {
+			padding-top: 20px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-3,
+		.bee-row-16 .bee-col-2 .bee-block-3,
+		.bee-row-16 .bee-col-3 .bee-block-3,
+		.bee-row-7 .bee-col-1 .bee-block-3,
+		.bee-row-7 .bee-col-2 .bee-block-3,
+		.bee-row-7 .bee-col-3 .bee-block-3 {
+			padding-bottom: 10px;
+			padding-top: 20px
+		}
+
+		.bee-row-14 .bee-row-content,
+		.bee-row-20 .bee-row-content,
+		.bee-row-8 .bee-row-content {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/bottom__1_.png');
+			background-position: center top;
+			background-repeat: no-repeat;
+			color: #000000
+		}
+
+		.bee-row-10 .bee-col-1,
+		.bee-row-10 .bee-col-2,
+		.bee-row-16 .bee-col-1,
+		.bee-row-16 .bee-col-2,
+		.bee-row-16 .bee-col-3,
+		.bee-row-22 .bee-col-1 {
+			padding: 25px
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-1 {
+			padding-top: 40px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1,
+		.bee-row-13 .bee-col-2 .bee-block-1 {
+			color: #000000;
+			font-family: inherit;
+			font-size: 14px;
+			padding-top: 10px;
+			text-align: center
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2,
+		.bee-row-13 .bee-col-2 .bee-block-2 {
+			color: #000000;
+			font-family: inherit;
+			font-size: 14px;
+			padding-top: 25px;
+			text-align: center
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-3,
+		.bee-row-13 .bee-col-2 .bee-block-3,
+		.bee-row-19 .bee-col-1 .bee-block-2 {
+			padding-top: 25px
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-4,
+		.bee-row-13 .bee-col-2 .bee-block-4 {
+			padding-bottom: 10px;
+			padding-top: 25px
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-2 {
+			padding-bottom: 40px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-1,
+		.bee-row-16 .bee-col-2 .bee-block-1,
+		.bee-row-16 .bee-col-3 .bee-block-1 {
+			color: #000000;
+			font-family: Oswald, Arial, 'Helvetica Neue', Helvetica, sans-serif;
+			font-size: 32px;
+			text-align: center
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-2,
+		.bee-row-16 .bee-col-2 .bee-block-2,
+		.bee-row-16 .bee-col-3 .bee-block-2 {
+			padding-top: 15px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-3 {
+			padding-bottom: 10px;
+			padding-top: 5px
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-4 {
+			padding-top: 10px;
+			text-align: center
+		}
+
+		.bee-row-22 .bee-col-2,
+		.bee-row-22 .bee-col-4 {
+			padding: 45px 25px 25px
+		}
+
+		.bee-row-22 .bee-col-3 {
+			padding: 45px 25px 5px
+		}
+
+		.bee-row-22 .bee-col-3 .bee-block-1 {
+			padding-bottom: 10px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-22 .bee-col-3 .bee-block-2 {
+			color: #0b0b0b;
+			font-family: inherit;
+			font-size: 18px;
+			text-align: left
+		}
+
+		.bee-row-23 .bee-col-1 .bee-block-1 {
+			padding-top: 20px
+		}
+
+		.bee-row-24 .bee-row-content {
+			color: #000000
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 {
+			color: #1e0e4b;
+			font-family: Inter, sans-serif;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-4 .bee-col-1 .bee-block-1 h1 {
+			color: #0b0b0b;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 68px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2,
+		.bee-row-4 .bee-col-1 .bee-block-2 {
+			color: #0b0b0b;
+			font-size: 20px;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2 a,
+		.bee-row-13 .bee-col-1 .bee-block-3 a,
+		.bee-row-13 .bee-col-1 .bee-block-4 a,
+		.bee-row-13 .bee-col-2 .bee-block-3 a,
+		.bee-row-13 .bee-col-2 .bee-block-4 a,
+		.bee-row-16 .bee-col-1 .bee-block-3 a,
+		.bee-row-16 .bee-col-2 .bee-block-3 a,
+		.bee-row-16 .bee-col-3 .bee-block-3 a,
+		.bee-row-19 .bee-col-1 .bee-block-2 a,
+		.bee-row-19 .bee-col-1 .bee-block-3 a,
+		.bee-row-23 .bee-col-1 .bee-block-1 a,
+		.bee-row-4 .bee-col-1 .bee-block-2 a,
+		.bee-row-7 .bee-col-1 .bee-block-3 a,
+		.bee-row-7 .bee-col-2 .bee-block-3 a,
+		.bee-row-7 .bee-col-3 .bee-block-3 a {
+			color: #8a3b8f
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-13 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-13 .bee-col-1 .bee-block-4 p:not(:last-child),
+		.bee-row-13 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-13 .bee-col-2 .bee-block-4 p:not(:last-child),
+		.bee-row-16 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-16 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-16 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-19 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-19 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-23 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-4 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-7 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-7 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-7 .bee-col-3 .bee-block-3 p:not(:last-child) {
+			margin-bottom: undefined
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-13 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-7 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-7 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-7 .bee-col-3 .bee-block-1 .bee-icon-image {
+			padding: 0
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-1 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-2 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-16 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-16 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-16 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-7 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-7 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-7 .bee-col-3 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-7 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-2 h3,
+		.bee-row-16 .bee-col-2 .bee-block-2 h3,
+		.bee-row-16 .bee-col-3 .bee-block-2 h3,
+		.bee-row-19 .bee-col-1 .bee-block-1 h3,
+		.bee-row-7 .bee-col-1 .bee-block-2 h3,
+		.bee-row-7 .bee-col-2 .bee-block-2 h3,
+		.bee-row-7 .bee-col-3 .bee-block-2 h3 {
+			color: #0b0b0b;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 32px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-3 a,
+		.bee-row-19 .bee-col-1 .bee-block-4 a,
+		.bee-row-4 .bee-col-1 .bee-block-3 a {
+			background-color: #8125bb;
+			border-bottom: 3px solid #8125BB;
+			border-left: 3px solid #8125BB;
+			border-radius: 60px;
+			border-right: 3px solid #8125BB;
+			border-top: 3px solid #8125BB;
+			color: #ffffff;
+			direction: ltr;
+			font-family: inherit;
+			font-size: 16px;
+			line-height: 200%;
+			padding: 5px 40px 5px 35px;
+			width: auto
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-1 h2,
+		.bee-row-15 .bee-col-1 .bee-block-2 h2 {
+			font-size: 60px;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-weight: 400;
+			letter-spacing: normal;
+			color: #0b0b0b
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-3,
+		.bee-row-13 .bee-col-1 .bee-block-4,
+		.bee-row-13 .bee-col-2 .bee-block-3,
+		.bee-row-13 .bee-col-2 .bee-block-4,
+		.bee-row-16 .bee-col-1 .bee-block-3,
+		.bee-row-16 .bee-col-2 .bee-block-3,
+		.bee-row-16 .bee-col-3 .bee-block-3,
+		.bee-row-19 .bee-col-1 .bee-block-2,
+		.bee-row-7 .bee-col-1 .bee-block-3,
+		.bee-row-7 .bee-col-2 .bee-block-3,
+		.bee-row-7 .bee-col-3 .bee-block-3 {
+			color: #0b0b0b;
+			font-size: 20px;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-7 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-1 h2 {
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2 .bee-icon-image,
+		.bee-row-13 .bee-col-2 .bee-block-2 .bee-icon-image {
+			padding: 5px
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-13 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-13 .bee-col-2 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-2 h2 {
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-16 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-16 .bee-col-3 .bee-block-1 .bee-icon-image {
+			padding: 0 30px 0 0
+		}
+
+		.bee-row-16 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-16 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-16 .bee-col-3 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-22 .bee-col-3 .bee-block-1 h2 {
+			color: #0b0b0b;
+			direction: ltr;
+			font-family: Oswald, Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 32px;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-3 {
+			color: #0b0b0b;
+			font-size: 33px;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-23 .bee-col-1 .bee-block-1 {
+			color: #0b0b0b;
+			font-size: 16px;
+			line-height: 150%;
+			text-align: center
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-24 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-22 .bee-col-3 .bee-block-2 li {
+			padding-bottom: 5px;
+			padding-top: 10px
+		}
+
+		.bee-row-22 .bee-col-3 .bee-block-2 li a {
+			color: #0b0b0b
+		}
+
+		@media (max-width:768px) {
+			.bee-mobile_hide {
+				display: none
+			}
+
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-2 .bee-col-1 {
+				padding: 55px 25px 0 !important
+			}
+
+			.bee-row-2 .bee-col-2 {
+				padding: 5px !important
+			}
+
+			.bee-row-4 .bee-col-1 {
+				padding: 0 5px 0 20px !important
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="bee-page-container">
+		<div class="bee-row bee-row-1">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:20px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-2">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-center bee-autowidth" src="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/3ej/p99/9hb/logo.png" style="max-width:390px;" /></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w8"></div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-3">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider bee-mobile_hide">
+						<div class="spacer" style="height:50px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-4">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h1><span class="tinyMce-placeholder">Controle suas finanças de um jeito simples e eficiente</span> </h1>
+					</div>
+					<div class="bee-block bee-block-2 bee-paragraph">
+						<p style="word-break: break-word;">Economize tempo com uma planilha automatizada e personalizável para suas necessidades financeiras.</p>
+					</div>
+					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="https://mpago.la/2gL4iVz" style="font-size: 16px; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 16px; line-height: 200%;"><strong style="font-size: 16px;"><span style="font-size: 16px;">Eu quero</span></strong></span></a></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-image"><img alt="Finance App" class="bee-fixedwidth" src="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/iw1/0mj/wa7/finance-main__4_.png" style="max-width:610px;" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-5">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:100px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-6">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-7">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="64px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/plan__1_.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><strong>Fácil Visualização</strong> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;">Nossos gráficos e tabelas são projetados para apresentar seus dados de maneira clara e compreensível, com cores e layouts que facilitam a identificação rápida de informações importantes.</p>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="64px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/save__1_.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><strong>Simples de Usar</strong> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;">Com uma interface intuitiva e funções automatizadas, você não precisa ser um expert para gerenciar suas finanças. A planilha vem pré-configurada para simplificar ao máximo a inserção e análise de dados.</p>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="64px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/solve__1_.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><strong>Importação Automática</strong> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;">Integração direta com o Nubank e o Google drive, permitindo a importação de suas transações com apenas alguns cliques, economizando tempo e reduzindo erros manuais.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-8">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-9">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:100px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-10">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w5">
+					<div class="bee-block bee-block-1 bee-image"><img alt="Girl with a laptop" class="bee-center bee-fixedwidth" src="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/np9/mhf/whf/dashboard%20%281%29.png" style="max-width:375px;" /></div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w7">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h2><strong>Toda informação que necesita em um só lugar</strong> </h2>
+					</div>
+					<div class="bee-block bee-block-2 bee-paragraph">
+						<p style="word-break: break-word;">Visualize transações, gastos categorizados, e orçamentos mensais de forma clara e eficiente com gráficos dinâmicos que facilitam a compreenssão dos seus dados financeiros.</p>
+					</div>
+					<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="https://mpago.la/2gL4iVz" style="font-size: 16px; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 16px; line-height: 200%;"><strong style="font-size: 16px;"><span style="font-size: 16px;">Eu quero</span></strong></span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-11">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:100px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-12">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-13">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="128px" src="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/ang/twm/tm8/laura.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-icons">
+						<div class="bee-icon bee-icon-first">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;"><em>"Essa planilha mudou a forma como eu gerencio minhas finanças! Super recomendada."</em></p>
+					</div>
+					<div class="bee-block bee-block-4 bee-paragraph">
+						<p style="word-break: break-word;"><strong><span>— Laura Couto</span></strong></p>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w6">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="128px" src="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/o48/pa6/ygr/bianca.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-icons">
+						<div class="bee-icon bee-icon-first">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-content">
+								<div class="bee-icon-image"><img height="32px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/Star__1_.png" width="auto" /></div>
+							</div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;"><em>"A integração com o Nubank é fantástica, facilita muito minha vida."</em></p>
+					</div>
+					<div class="bee-block bee-block-4 bee-paragraph">
+						<p style="word-break: break-word;"><strong><span>— Bianca Medeiros</span></strong></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-14">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-15">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:100px;"></div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h2><span class="tinyMce-placeholder">Perguntas Frequentes</span> </h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-16">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-icon-image"><img height="64px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/question.png" width="auto" /></div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><strong>Na planilha que recebo ao comprar, posso alterar fórmulas, cores, etc?</strong> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;">Sim. A planilha é completamente desbloqueada.</p>
+					</div>
+				</div>
+				<div class="bee-col bee-col-2 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-icon-image"><img height="64px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/question.png" width="auto" /></div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><span class="tinyMce-placeholder"><strong>Em quanto tempo recebo a planilha?</strong></span> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;"><span>Imediatamente ao finalizar a compra, aparece uma opção para clonar a planilha.</span></p>
+					</div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w4">
+					<div class="bee-block bee-block-1 bee-icons">
+						<div class="bee-icon bee-icon-last">
+							<div class="bee-icon-image"><img height="64px" src="https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7681/question.png" width="auto" /></div>
+						</div>
+					</div>
+					<div class="bee-block bee-block-2 bee-heading">
+						<h3><strong>Esse valor da planilha é uma mensalidade ou pagamento único?</strong> </h3>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p style="word-break: break-word;">Esse valor é único, pagando apenas na compra. Não há mensalidades!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-17">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:80px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-18">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-19">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h3><strong>Fluxo de Caixa automatizado para Google Sheets</strong> </h3>
+					</div>
+					<div class="bee-block bee-block-2 bee-paragraph">
+						<p style="word-break: break-word;"><span style="text-decoration: line-through;">R$ 259,00</span>  </p>
+					</div>
+					<div class="bee-block bee-block-3 bee-paragraph">
+						<p><strong>R$ 129,00</strong></p>
+					</div>
+					<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="https://mpago.la/2gL4iVz" style="font-size: 16px; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 16px; line-height: 200%;"><strong style="font-size: 16px;"><span style="font-size: 16px;">COMPRAR AGORA</span></strong></span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-20">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:60px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-21">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-divider">
+						<div class="spacer" style="height:80px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-22">
+			<div class="bee-row-content reverse">
+				<div class="bee-col bee-col-1 bee-col-w3"></div>
+				<div class="bee-col bee-col-2 bee-col-w3">
+					<div class="bee-block bee-block-1 bee-image"><a href="http://www.example.com/" target="_self"><img alt="Logo" class="bee-fixedwidth" src="https://e264b964ce.imgdist.com/pub/bfra/93gu3vdm/3ej/p99/9hb/logo.png" style="max-width:280px;" /></a></div>
+				</div>
+				<div class="bee-col bee-col-3 bee-col-w3">
+					<div class="bee-block bee-block-1 bee-heading">
+						<h2><strong>Contato<br /></strong> </h2>
+					</div>
+					<div class="bee-block bee-block-2 bee-menu">
+						<nav class="bee-menu">
+							<ul class="bee-vertical">
+								<li><a href="https://api.whatsapp.com/send?phone=5521991818118&amp;text=Ol%C3%A1,%20quero%20saber%20sobre%20a%20planilha%20de%20fluxo%20de%20caixa!" target="_self" title="">(21) 99181-8118</a></li>
+								<li><a href="mailto:renato@fostertech.me?subject=Planilha%20de%20Fluxo%20de%20Caixa&amp;body=Ol%C3%A1%2C%20%0A%0AQuero%20saber%20mais%20sobre%20a%20planilha." target="_self" title="">renato@fostertech.me</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="bee-col bee-col-4 bee-col-w3"></div>
+			</div>
+		</div>
+		<div class="bee-row bee-row-23">
+			<div class="bee-row-content">
+				<div class="bee-col bee-col-1 bee-col-w12">
+					<div class="bee-block bee-block-1 bee-paragraph">
+						<p style="word-break: break-word;"><span>©2025 All rights reserved.</span></p>
+					</div>
+					<div class="bee-block bee-block-2 bee-divider">
+						<div class="spacer" style="height:80px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+
+</html>
